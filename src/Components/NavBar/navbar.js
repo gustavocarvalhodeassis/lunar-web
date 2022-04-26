@@ -1,10 +1,70 @@
 import Logo from "./logo";
+import TextButton from "../Buttons/textButton";
+
+const navLinks = [
+  {
+    name: "Inicío",
+    hrefid: "home",
+    type: 1
+  },
+  {
+    name: "Sobre",
+    hrefid: "about",
+    type: 1
+  },
+  {
+    name: "Avaliações",
+    hrefid: "reports",
+    type: 1
+  },
+  {
+    name: "Paineis",
+    type: 2
+  },
+  {
+    name: "Contate-nos",
+    hrefid: "contact",
+    type: 3
+  }
+]
 
 function NavBar() {
   return (
     <>
       <header>
-          <Logo />
+        <Logo />
+        <nav className="nav">
+          <ul className="nav-links">
+            <li className="links">
+              <a>
+                Início
+              </a>
+            </li>
+            <li className="links">
+              <a>
+                Sobre
+              </a>
+            </li>
+            <li className="links">
+              <a>
+                Avaliações
+              </a>
+            </li>
+            <li className="links">
+              <a className="painel-dropper">
+                Paineis
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.7069 8.70707L12.7069 17.7071C12.5119 17.9021 12.256 18 12 18C11.744 18 11.488 17.9021 11.293 17.7071L2.29301 8.70707C1.90201 8.31607 1.90201 7.68401 2.29301 7.29301C2.68401 6.90201 3.31595 6.90201 3.70695 7.29301L12 15.5861L20.293 7.29301C20.684 6.90201 21.3159 6.90201 21.7069 7.29301C22.0979 7.68401 22.0979 8.31607 21.7069 8.70707Z" fill="#1D343E" />
+                </svg>
+              </a>
+            </li>
+            <li className="links">
+              <a>
+                <TextButton text="Contate-nos" />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </>
   );

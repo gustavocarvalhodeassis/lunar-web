@@ -1,0 +1,54 @@
+
+.btn{
+    border: none;
+    border-radius: 7px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    cursor: pointer;
+}
+
+/* FILLED */
+.btn-filled{
+    background-color: #7A3FF3;
+    color: white;
+    transition: all 0.25s;
+    outline: #7b3ff33a 0px solid;
+}
+.btn-filled:hover{
+    transition: all 0.25s;
+    outline: #7b3ff33a 5px solid;
+}
+.btn-filled:active{
+    transition: all 0.25s;
+    background-color: #5d2cbe;
+    outline: #7b3ff33a 3px solid;
+}
+
+@media screen and (max-width: 912px) {
+    .btn{
+        padding: 7px 17px;
+        font-size: 12px;
+    }
+}
+
+/* END FILLED */
+
+/* TEXT */
+.btn-text{
+    background-color: transparent;
+    color: #7A3FF3;
+    text-decoration: underline;
+    transition: all 0.25s;
+    outline: #7b3ff33a 0px solid;
+}
+.btn-text:hover{
+    transition: all 0.25s;
+    outline: #7b3ff33a 5px solid;
+}
+.btn-text:active{
+    transition: all 0.25s;
+    outline: #7b3ff33a 3px solid;
+}
+/* END TEXT */
