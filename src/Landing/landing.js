@@ -14,23 +14,26 @@ function LandingPage() {
                 </p>
             </div>
         </section>
+        <div className='sec-home-card'></div>
         <div className='sec-home-big-card'>
-                <div className='sec-home-info-card'>
-                    <h1>
-                        99+
-                    </h1>
+            <div className='sec-home-info-card'>
+                <h1>
+                    99+
                     <p>
                         Empresas Contrataram
                     </p>
-                    <h1>
-                        39
-                    </h1>
+                </h1>
+
+                <h1>
+                    39
                     <p>
                         Representantes
                     </p>
+                </h1>
 
-                </div>
+
             </div>
+        </div>
     </>
 }
 
