@@ -1,61 +1,105 @@
 ::-webkit-scrollbar {
     width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(0,0,0, 0.1);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     margin: 2px;
     background: #7A3FF3;
     border-radius: 5px;
     width: 3px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #552baa;
     border-radius: 5px;
 
-  }  
+}
+:root{
+    --padd-content2: 5%;
+}
+html {
+    background-color: #393E45;
+    scroll-behavior: smooth;
+}
 
-section{
-    margin: 0px 150px;
+section {
     box-sizing: border-box;
 }
 
-.sec-home{
-    padding-top: 80px;
+#home {
+    scroll-margin-block-start: 110px;
+    /*Adds margin to the top of the viewport*/
+
+    scroll-margin-block-end: 110pxx;
+    /*Adds margin to the bottom of the viewport*/
 }
-.sec-home-text{
+
+#about {
+    scroll-margin-block-start: 110px;
+    /*Adds margin to the top of the viewport*/
+
+    scroll-margin-block-end: 110pxx;
+    /*Adds margin to the bottom of the viewport*/
+}
+
+#report {
+    scroll-margin-block-start: 110px;
+    /*Adds margin to the top of the viewport*/
+
+    scroll-margin-block-end: 110pxx;
+    /*Adds margin to the bottom of the viewport*/
+}
+
+#do {
+    scroll-margin-block-start: 110px;
+    /*Adds margin to the top of the viewport*/
+
+    scroll-margin-block-end: 110pxx;
+    /*Adds margin to the bottom of the viewport*/
+}
+
+.sec-home {
+    margin:var(--padd-content2) 150px  var(--padd-content) 150px ;
+}
+
+.sec-home-text {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
 }
-.sec-home-text h1{
+
+.sec-home-text h1 {
     font-size: 3.25rem;
     font-weight: bold;
     width: 45%;
 }
-.sec-home-text h1 font{
+
+.sec-home-text h1 font {
     color: #7A3FF3;
 }
-.sec-home-text p{
+
+.sec-home-text p {
     font-size: 1.25rem;
     font-weight: normal;
     line-height: 3.125rem;
     width: 45%;
 }
-.sec-home-card{
+
+.sec-home-card {
     width: 100%;
 }
-.sec-home-big-card{
-    margin: 200px 150px;
+
+.sec-home-big-card {
+    margin: 0px 150px;
     height: 800px;
     background-image: url(./assets/1.jpg);
     border-radius: 1.25rem;
@@ -65,7 +109,8 @@ section{
     flex-direction: column;
     align-items: flex-end;
 }
-.sec-home-info-card{
+
+.sec-home-info-card {
     padding: 0px 50px;
     margin-right: 80px;
     width: 650px;
@@ -78,118 +123,34 @@ section{
     background-color: #7A3FF3;
     border-radius: 1.25rem;
     color: white;
-    outline:#7b3ff33a 0px solid;
+    outline: #7b3ff33a 0px solid;
     transition: all 0.25s ease-in-out;
 }
-.sec-home-info-card:hover{
+
+.sec-home-info-card:hover {
     outline: #7b3ff33a 8px solid;
     transition: all 0.25s ease-in-out;
 
 }
+
 .sec-home-info-card h1 {
     font-size: 3rem;
     font-weight: bold;
     display: flex;
     align-items: center;
 }
-.sec-home-info-card h1 p{
+
+.sec-home-info-card h1 p {
     font-weight: normal;
     margin-left: 10px;
     font-size: 1.25rem;
 }
 
-@media screen and (max-width: 1365px) {
-    section{
-        margin: 0px 100px;
-    }
-    .sec-home{
-        padding-top: 0px;
-    }
-    .sec-home-text{
-        flex-direction: column;
-    }
-    .sec-home-text h1{
-        width: 100%;
-    }
-    .sec-home-text p{
-        margin-top: 30px;
-        width: 100%;
-    }
-    .sec-home-info-card {
-        margin: 0;
-        transform: translate(0,-50%);
-        padding: 0px 75px;
-    }
-
-    .sec-home-big-card{
-        width: 100%;
-        margin: 160px 0px;
-        height: 500px;
-        border-radius: 0px;
-        align-items: center;
-        padding: 0px 100px;
-    }
-
-}
-@media screen and (max-width: 1000px) {
-    section{
-        margin: 0px 75px;
-    }
-    .sec-home-info-card {
-        margin: 0;
-        width: 100%;
-        transform: translate(0,-50%);
-        padding: 0px 75px;
-    }
-    .sec-home-info-card h1{
-        font-size: 2.5rem;
-    }
-    .sec-home-big-card h1 p{
-        font-size: 1.25rem;
-    }
-    .sec-home-info-card{
-        height: 170px;
-    }
-}
-@media screen and (max-width: 860px) {  
-    section{
-        margin: 0px 30px;
-    }
-    .sec-home-big-card{
-        padding: 0px 30px;
-    }
-    .sec-home-info-card h1{
-        font-size: 2.5rem;
-    }
-    .sec-home-big-card h1 p{
-        font-size: 1rem;
-    }
-    .sec-home-big-card{
-        height: 300px;
-        background-size: cover;
-    }
-    .sec-home-info-card{
-        height: 150px;
-        padding: 0 20px;
-    }
-    
-}
-@media screen and (max-width: 400px) {  
-    section{
-        margin: 0px 30px;
-    }
-    .sec-home-big-card{
-        padding: 0px 30px;
-    }
-    .sec-home-info-card{
-        height: 120px;
-        padding: 0px 0px;
-    }
-    .sec-home-info-card h1{
-        font-size: 1.25rem;
-    }
-    .sec-home-big-card h1 p{
-        font-size: 0.5rem;
-    }
-    
+.light-section {
+    height: 850px;
+    width: 100%;
+    background-color: #F4F4F4;
+    position: absolute;
+    z-index: -1;
+    top: 0;
 }
