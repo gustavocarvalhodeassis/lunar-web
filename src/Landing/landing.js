@@ -18,6 +18,7 @@ function LandingPage() {
         </section>
         <div className='sec-home-card'></div>
         <div className='sec-home-big-card'>
+            <div className='container-landing'>
             <div className='sec-home-info-card'>
                 <h1>
                     99+
@@ -33,10 +34,13 @@ function LandingPage() {
                     </p>
                 </h1>
             </div>
+            </div>
         </div>
 
         <section id='about' className='dark-section'>
             <div className='card-1'>
+                <div className='container-landing'>
+                    <div className='card-group'>
                 <div className='card'>
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M45.7296 20.6895C44.0567 12.3895 37.6128 5.944 29.3107 4.27109C27.7837 3.96275 26.1962 4.35451 24.9753 5.35243C23.7587 6.35034 23.0607 7.82115 23.0607 9.3899V20.6895C23.0607 24.1354 25.8649 26.9395 29.3107 26.9395H40.6108C42.1816 26.9395 43.6525 26.2417 44.6484 25.0251C45.6442 23.8084 46.04 22.227 45.7296 20.6895ZM41.4275 22.3833C41.3067 22.527 41.0441 22.7729 40.6108 22.7729H29.3107C28.1607 22.7729 27.2274 21.8395 27.2274 20.6895V9.3899C27.2274 8.95657 27.4712 8.69388 27.617 8.57305C27.7358 8.47721 27.9629 8.33348 28.2754 8.33348C28.3421 8.33348 28.4129 8.33971 28.4899 8.35637C35.1399 9.69596 40.3067 14.8605 41.6442 21.5105C41.7296 21.9334 41.5442 22.2395 41.4275 22.3833ZM42.8692 31.8564C40.3213 40.2169 32.7212 45.8335 23.9587 45.8335C13.0462 45.8335 4.16705 36.9543 4.16705 26.0418C4.16705 17.2793 9.78369 9.67952 18.1441 7.1316C19.2462 6.79827 20.4087 7.41913 20.7441 8.51913C21.0774 9.61913 20.4567 10.7833 19.3567 11.1187C12.765 13.1271 8.33372 19.1252 8.33372 26.0418C8.33372 34.6585 15.3421 41.6668 23.9587 41.6668C30.8754 41.6668 36.8734 37.2355 38.8817 30.6439C39.2192 29.5418 40.3858 28.9272 41.4817 29.2563C42.5817 29.5918 43.2025 30.7564 42.8692 31.8564Z" fill="#7A3FF3" />
@@ -58,8 +62,13 @@ function LandingPage() {
                     <h1>Documentos fiscais</h1>
                     <p>Aqui você pode entrar NF-e de compra e emitir NFC-e e NF-e de venda.</p>
                 </div>
+                
+                </div>
+                </div>
+                
             </div>
             <div className='card-2'>
+                <div className='container-landing'>
                 <div className='card-2-content'>
                     <h1>
                         Deixe de lado o papel e a caneta.
@@ -83,21 +92,28 @@ function LandingPage() {
                             <p>Economize
                                 Espaço.</p>
                         </div>
-                        <div className='item'>
+                        <br></br>
+                        <div className='item' >
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M35 5.83325C18.9175 5.83325 5.83331 18.9174 5.83331 34.9999C5.83331 51.0824 18.9175 64.1666 35 64.1666C51.0825 64.1666 64.1667 51.0824 64.1667 34.9999C64.1667 18.9174 51.0825 5.83325 35 5.83325ZM35 58.3333C22.1346 58.3333 11.6666 47.8653 11.6666 34.9999C11.6666 22.1345 22.1346 11.6666 35 11.6666C47.8654 11.6666 58.3333 22.1345 58.3333 34.9999C58.3333 47.8653 47.8654 58.3333 35 58.3333ZM37.9166 46.6666C37.9166 48.2766 36.61 49.5833 35 49.5833C33.39 49.5833 32.0833 48.2766 32.0833 46.6666C32.0833 45.0566 33.39 43.7499 35 43.7499C36.61 43.7499 37.9166 45.0566 37.9166 46.6666ZM37.9166 23.3333V34.9999C37.9166 36.6128 36.61 37.9166 35 37.9166C33.39 37.9166 32.0833 36.6128 32.0833 34.9999V23.3333C32.0833 21.7203 33.39 20.4166 35 20.4166C36.61 20.4166 37.9166 21.7203 37.9166 23.3333Z" fill="#7A3FF3" />
                             </svg>
 
                             <p>Elimine
-                                Complicações.</p>
+                                Dificuldades.</p>
                         </div>
                     </div>
                 </div>
+                
                 <div className='card-2-img'>
+                </div>
                 </div>
             </div>
             <div id='report' className='what-they-say'>
+            <div className='container-landing'>
+            <div className='report-group'>
                 <div className='person-1'>
+                    
+                       
                     <h1 className='title'>
                         O que <font>alguns</font> de nossos clientes <font>disseram.</font>
                     </h1>
@@ -129,6 +145,8 @@ function LandingPage() {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna nulla, rutrum in ornare sed, blandit id ex. Cras consequat, libero a accumsan vestibulum.
                         </p>
                     </div>
+                </div>
+                </div>
                 </div>
             </div>
         </section>

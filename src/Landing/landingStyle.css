@@ -21,9 +21,6 @@
     border-radius: 5px;
 
 }
-:root{
-    --padd-content2: 5%;
-}
 html {
     background-color: #393E45;
     scroll-behavior: smooth;
@@ -31,6 +28,12 @@ html {
 
 section {
     box-sizing: border-box;
+}
+
+:root{
+    --margin-content: 120px;
+    --h1-title: 2.5rem;
+    --p-text: 1.0rem
 }
 
 #home {
@@ -65,12 +68,17 @@ section {
     /*Adds margin to the bottom of the viewport*/
 }
 
+
 .sec-home {
-    margin:var(--padd-content2) 150px  var(--padd-content) 150px ;
+    margin:var(--margin-content) 0 0 0 ;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
 }
 
 .sec-home-text {
-    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -78,9 +86,9 @@ section {
 }
 
 .sec-home-text h1 {
-    font-size: 3.25rem;
+    font-size: var(--h1-title);
     font-weight: bold;
-    width: 45%;
+    margin-right: 30px;
 }
 
 .sec-home-text h1 font {
@@ -88,10 +96,10 @@ section {
 }
 
 .sec-home-text p {
-    font-size: 1.25rem;
+    font-size: var(--p-text);
     font-weight: normal;
     line-height: 3.125rem;
-    width: 45%;
+    margin-left: 30px;
 }
 
 .sec-home-card {
@@ -99,29 +107,31 @@ section {
 }
 
 .sec-home-big-card {
-    margin: 0px 150px;
-    height: 800px;
+    height: 700px;
+    margin-top: 200px;
     background-image: url(./assets/1.jpg);
-    border-radius: 1.25rem;
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
-
+.container-landing{
+    max-width: 1200px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 .sec-home-info-card {
-    padding: 0px 50px;
-    margin-right: 80px;
-    width: 650px;
-    height: 180px;
+    padding: 50px 50px;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    transform: translate(0, -50%);
     background-color: #7A3FF3;
     border-radius: 1.25rem;
+    transform: translate(0, -50%);
     color: white;
     outline: #7b3ff33a 0px solid;
     transition: all 0.25s ease-in-out;
@@ -134,16 +144,16 @@ section {
 }
 
 .sec-home-info-card h1 {
-    font-size: 3rem;
+    font-size: var(--h1-title);
     font-weight: bold;
     display: flex;
     align-items: center;
 }
 
-.sec-home-info-card h1 p {
+.sec-home-info-card p {
     font-weight: normal;
     margin-left: 10px;
-    font-size: 1.25rem;
+    font-size: var(--p-text);
 }
 
 .light-section {
@@ -153,4 +163,9 @@ section {
     position: absolute;
     z-index: -1;
     top: 0;
+}
+@media screen and (max-width: 1600px) {
+    :root{
+        --margin-content: 0px;
+    }
 }

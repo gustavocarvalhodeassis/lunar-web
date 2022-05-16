@@ -3,9 +3,11 @@
 html{
     scroll-behavior: smoot;
 }
+
 :root{
-    --padd-content: 10%;
-    --padd-lf-rg: 10%;
+    --margin-content: 120px;
+    --h1-title: 2.5rem;
+    --p-text: 1.0rem
 }
 
 .dark-section {
@@ -13,46 +15,60 @@ html{
     width: auto;
 }
 .card-1 {
+    margin-top:var(--margin-content);
     display: flex;
     flex-direction: row;
-    margin-top: var(--padd-content);
     justify-content: space-evenly;
 }
 
-.card-1 .card {
-    padding: 0 30px;
+.card {
+    padding: 20px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 20px;
+    transition: all 0.25s ease-in-out;
 }
-
+.card:hover{
+    background-color: #42474e;
+    transition: all 0.25s ease-in-out;
+    transform: scale(1.2);
+    outline: 5px #7b3ff320;
+}
+.card-group{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
 .card svg {
     margin-bottom: 25px;
 }
 
 .card h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 25px;
     color: white;
 }
 
 .card p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .card-2 {
     display: flex;
     flex-direction: row;
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
-    margin-top: var(--padd-content);;
+    justify-content: center;
+    margin-top: var(--margin-content);;
 }
 
 .card-2-content {
-    margin-right: 60px;
+    min-width: 200px;
     color: white;
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -63,11 +79,11 @@ html{
 }
 
 .card-2-content h1 {
-    font-size: 3rem;
+    font-size:  var(--h1-title);
 }
 
 .card-2-content P {
-    font-size: 1.25rem;
+    font-size: var(--p-text);
     margin: 60px 0;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -86,8 +102,7 @@ html{
 }
 
 .card-2-img {
-    display: block;
-    width:100%;
+    min-width: 530px;
     height: 800px;
     border-radius: 20px;
     background-size: cover;
@@ -96,14 +111,18 @@ html{
 }
 
 .what-they-say{
-    margin-top: var(--padd-content);;
+    margin-top: var(--margin-content);
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.report-group{
     display: flex;
     flex-direction: row;
-    color: white;
     justify-content: space-between;
 }
 .title{
-    font-size: 3rem;
+    font-size:  var(--h1-title);
     color: white;
     margin-bottom: 60px;
 }
@@ -152,15 +171,15 @@ html{
 }
 .person-name{
     margin-top: 60px;
-    font-size: 3rem;
+    font-size:var(--h1-title);
 }
 .person-words{
     margin-top: 60px;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1.25rem;
+    font-size: var(--p-text);
 }
 footer{
-    margin-top: var(--padd-content);
+    margin-top: var(--margin-content);
     padding: 120px var(--padd-lf-rg);
     display: flex;
     flex-direction: column;
@@ -170,10 +189,4 @@ footer{
 }
 footer h1 font{
     color: #7A3FF3;
-}
-@media screen and (max-width: 1365px) {
-    :root{
-        --padd-content: 5%;
-        --padd-lf-rg: 5%;
-    }
 }
