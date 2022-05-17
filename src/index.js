@@ -12,6 +12,7 @@ root.render(
     <NavBar />
     <LandingPage />
     <FloatingActionButton />
+
   </React.StrictMode>
 );
 

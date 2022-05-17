@@ -10,3 +10,18 @@
     justify-content: center;
     background-color: #7A3FF3;
 }
+
+@media screen and (max-width: 800px) {
+    .fl-ac-btn{
+        width: 60px;
+        height: 60px;
+        position:fixed;
+        bottom: 30px;
+        right: 30px;
+        border-radius: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7A3FF3;
+    }
+}

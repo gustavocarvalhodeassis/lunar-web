@@ -15,6 +15,7 @@
      align-items: center;
      justify-content: center;
      display: flex;
+     background-color: #F4F4F4;
  }
 
  .container {
@@ -48,37 +49,10 @@
 
  .mobile-header {
      width: 100%;
-     justify-content: space-between;
- }
-
- .menu {
-     cursor: pointer;
+     justify-content:center;
      display: flex;
+     flex-direction: row;
      align-items: center;
-     justify-content: center;
- }
-
- .menu:hover .circle-dec {
-     display: flex;
-     background-color: #E2E2E3;
-     transition: all 0.25s ease-in-out;
- }
-
- .menu:active .circle-dec {
-     width: 60px;
-     height: 60px;
-     transition: all 0.25s ease-in-out;
- }
-
- .circle-dec {
-     width: 75px;
-     height: 75px;
-     border-radius: 50px;
-     display: flex;
-     background-color: transparent;
-     position: absolute;
-     transition: all 0.25s ease-in-out;
-     z-index: -500;
  }
 
  .painel-btn {
@@ -105,38 +79,104 @@
      height: 150px;
      transition: all 0.25s ease-in-out;
  }
+ .menu-btn {
+    cursor:all-scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-dec {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+}
+.menu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1500;
+    padding: 50px;
+    background-color: white;
+    transform: scale(0.5);
+}
+.open-drawer:hover .menu{
+    transform: scale(1);
+}
+.menu-btn:hover .circle-dec {
+    background-color: #E2E2E3;
+    transition: all 0.25s ease-in-out;
+    z-index: -500;
+}
 
- @media screen and (min-width: 1366px) {
+.menu-btn:active .circle-dec {
+    width: 60px;
+    height: 60px;
+    transition: all 0.25s ease-in-out;
+}
+
+
+
+
+
+
+ @media screen and (min-width: 2550px) {
+    .container {
+        max-width: 1500px;
+        width: 1500px;
+    }
+
+}
+@media screen and (max-width: 1250px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+ @media screen and (min-width: 1000px) {
      .mobile-header {
          display: none;
      }
-
  }
 
- @media screen and (max-width: 1365px) {
+ @media screen and (max-width: 1050px) {
+     
+     .container{
+         max-width: 800px;
+         width: 800px;
+     }
      .desktop-header {
-         display: none;
-     }
-
-     .container {
-         margin: 0px 100px;
-     }
+        display: none;
+    }
+     .mobile-header {
+        display: flex;
+    }
  }
 
- @media screen and (max-width: 1000px) {
-     .container {
-         margin: 0px 75px;
-     }
+
+ @media screen and (max-width: 825px) {
+    .container{
+        max-width: 650px;
+        width: 650px;
+    }
+ }
+ @media screen and (max-width: 675px) {
+    .container{
+        max-width: 450px;
+        width: 450px;
+    }
  }
 
- @media screen and (max-width: 700px) {
+ @media screen and (max-width: 480px) {
      .container {
-         margin: 0px 30px;
-     }
- }
-
- @media screen and (max-width: 400x) {
-     .container {
-         margin: 0px 30px;
+         margin: 0px 20px;
+         max-width: none;
+         width: 100%;
      }
  }

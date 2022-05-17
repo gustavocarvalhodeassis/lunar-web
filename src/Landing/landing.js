@@ -1,9 +1,10 @@
 import './landingStyle.css'
 import './darkSectionStyle.css'
+import Menu from '../Components/NavBar/Menu/menu'
 
 function LandingPage() {
     return <>
-        <div className='light-section'></div>
+      
         <section id='home' className='sec-home'>
             <div className='sec-home-text'>
                 <h1 className='sec-home-text-title'>
@@ -15,7 +16,7 @@ function LandingPage() {
                     accumsan vestibulum.
                 </p>
             </div>
-        </section>
+        
         <div className='sec-home-card'></div>
         <div className='sec-home-big-card'>
             <div className='container-landing'>
@@ -36,7 +37,7 @@ function LandingPage() {
             </div>
             </div>
         </div>
-
+        </section>
         <section id='about' className='dark-section'>
             <div className='card-1'>
                 <div className='container-landing'>
@@ -66,9 +67,10 @@ function LandingPage() {
                 </div>
                 </div>
                 
-            </div>
+            </div>   
+            
             <div className='card-2'>
-                <div className='container-landing'>
+            <div className='container-landing'>
                 <div className='card-2-content'>
                     <h1>
                         Deixe de lado o papel e a caneta.
@@ -107,13 +109,12 @@ function LandingPage() {
                 <div className='card-2-img'>
                 </div>
                 </div>
+           
             </div>
             <div id='report' className='what-they-say'>
             <div className='container-landing'>
             <div className='report-group'>
-                <div className='person-1'>
-                    
-                       
+                <div className='person-1'>      
                     <h1 className='title'>
                         O que <font>alguns</font> de nossos clientes <font>disseram.</font>
                     </h1>
