@@ -42,7 +42,20 @@
      padding-left: 15px;
      color: #393E45;
  }
-
+ .painel-links .links{
+     padding: 10px 30px;
+     border-radius: 10px;
+     background-color: white;
+     transition: all 0.25s ease-in-out;
+}
+.painel-links .links:hover{
+    background-color: rgba(0,0,0,0.1);
+    transition: all 0.025s ease-in-out;
+}
+.painel-links .links:active{
+    transform: scale(0.95);
+    transition: all 0.025s ease-in-out;
+}
  .contact-btn {
      margin-left: 20px;
  }
@@ -63,20 +76,21 @@
 
  .painel-container {
      transform: translate(0%, 100%);
-     transform: scale(0);
-     height: 0px;
+     transform: scaleY(0);
      align-items: center;
      display: flex;
      position: absolute;
-     padding: 10px 30px;
+     top: 15px;
+     padding: 0px;
      background-color: white;
      border-radius: 20px;
      transition: all 0.25s ease-in-out;
  }
 
  .links:hover .painel-container {
-     transform: translate(0%, 20%);
-     height: 150px;
+     transform: scaleY(1);
+     top: 80px;
+     padding: 10px 0px;
      transition: all 0.25s ease-in-out;
  }
  .menu-btn {

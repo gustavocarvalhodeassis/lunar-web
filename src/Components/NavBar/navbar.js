@@ -5,12 +5,6 @@ import './Menu/menuStyle.css'
 
 import './navbarStyle.css'
 
-
-
-
-
-
-
 function NavBar() {
   return (
     <>
