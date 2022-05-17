@@ -185,15 +185,34 @@ html{
 }
 footer{
     margin-top: 120px;
-    padding: 120px var(--padd-lf-rg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 120px 0px;
     background-color: #1C1F22;
     color: white;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+footer h1{
+    text-align: center;
+    font-size: var(--h1-title);
+    margin-bottom: 60px;
+}
+footer p{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--p-text);
+    margin-bottom: 60px;
 }
 footer h1 font{
     color: #7A3FF3;
+}
+.footer-content{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
 }
 @media screen and (min-width: 2550px) {
    .person-1{

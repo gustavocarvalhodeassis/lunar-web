@@ -120,12 +120,15 @@ section {
     flex-direction: column;
     align-items: center;
 }
+.sec-home-big-card .container-landing {
+    justify-content: flex-end !important;
+}
 .container-landing{
     max-width: 1200px;
     width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .sec-home-info-card {
     padding: 50px 50px;
@@ -144,7 +147,6 @@ section {
 .sec-home-info-card:hover {
     outline: #7b3ff33a 8px solid;
     transition: all 0.25s ease-in-out;
-
 }
 
 .sec-home-info-card h1 {
