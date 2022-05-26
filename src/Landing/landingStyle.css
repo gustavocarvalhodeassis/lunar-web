@@ -21,6 +21,7 @@
     border-radius: 5px;
 
 }
+
 html {
     background-color: #393E45;
     scroll-behavior: smooth;
@@ -30,7 +31,7 @@ section {
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --margin-content: 120px;
     --h1-title: 2.5rem;
     --p-text: 1.0rem
@@ -70,7 +71,7 @@ section {
 
 
 .sec-home {
-    padding-top:120px;
+    padding-top: 120px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -120,18 +121,22 @@ section {
     flex-direction: column;
     align-items: center;
 }
+
 .sec-home-big-card .container-landing {
     justify-content: flex-end !important;
 }
-.container-landing{
+
+.container-landing {
     max-width: 1200px;
     width: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .sec-home-info-card {
     padding: 50px 50px;
+    gap: 15px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -170,100 +175,126 @@ section {
     z-index: -1;
     top: 0;
 }
+
 @media screen and (min-width: 2550px) {
-    .container-landing{
+    .container-landing {
         max-width: 1500px;
         width: 1500px;
     }
-    .sec-home-text{
+
+    .sec-home-text {
         width: 1500px;
         min-width: 1500px;
     }
-    .sec-home-big-card{
+
+    .sec-home-big-card {
         height: 70vh;
     }
 }
+
 @media screen and (max-width: 1600px) {
-    .sec-home{
+    .sec-home {
         padding-top: 60px;
     }
 }
+
 @media screen and (max-width: 1250px) {
-    .sec-home-text{
+    .sec-home-text {
         max-width: 1000px;
     }
 }
 
 @media screen and (max-width: 1370px) {
-    .sec-home{
+    .sec-home {
         padding-top: 30px;
     }
 }
-@media screen and (max-width: 1050px){
-    .sec-home-big-card .container-landing{
+
+@media screen and (max-width: 1050px) {
+    .sec-home-big-card .container-landing {
         align-items: center;
         justify-content: center;
     }
-    .sec-home-text{
+
+    .sec-home-text {
         width: 800px;
     }
 }
+
 @media screen and (max-width: 825px) {
-    .sec-home-text{
+    .sec-home-text {
         max-width: 650px;
         width: 650px;
-        flex-direction: column;
-    }
-    .sec-home-text h1{
-        margin-right: 0px;
-    }
-    .sec-home-text p{
-        margin-left: 0px;
-    }
-    .sec-home-info-card{
-    padding: 35px 20px;
-}
- }
-@media screen and (max-width: 675px) {
-    .sec-home-text{
-        width: 100%;
         margin: 0px 20px;
         flex-direction: column;
     }
+
+    .sec-home-text h1 {
+       padding: 0px 20px;
+    }
+
+    .sec-home-text p {
+        margin-left: 0px;
+        padding: 0px 20px;
+    }
+    .sec-home-big-card{
+        align-items: center;
+        padding: 0;
+    }
+    .sec-home-info-card {
+        padding: 35px 20px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .sec-home-text {
+        width: 100%;
+        max-width: none;
+        margin: 0px 20px;
+        flex-direction: column;
+    }
+
     .mobile-header {
         display: flex;
     }
- }
- @media screen and (max-width: 480px) {
-    .sec-home-text{
-        max-width:none;
-        width: 100%; 
-    }
-    .sec-home-text h1{
-        max-width:none;
-        width: 100%; 
-        padding: 0 20px;
-    }
-    .sec-home-text p{
-        max-width:none;
-        width: 100%; 
-        padding: 0 20px;
-    }
-    .sec-home-info-card{
-        padding: 35px 20px;
-        margin: 0px 20px;
-    }
- }
- @media screen and (max-width: 420px) {
-    .sec-home-text{
+}
+
+@media screen and (max-width: 480px) {
+    .sec-home-text {
         max-width: none;
         width: 100%;
         margin: 0px 20px;
     }
-    .sec-home-info-card{
+
+    .sec-home-text h1 {
+        max-width: none;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .sec-home-text p {
+        max-width: none;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .sec-home-info-card {
+        padding: 35px 20px;
+    }
+    .sec-home-info-card {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
- }
+}
 
+@media screen and (max-width: 420px) {
+    .sec-home-text {
+        max-width: none;
+        width: 100%;
+        margin: 0px 20px;
+    }
+
+    
+}

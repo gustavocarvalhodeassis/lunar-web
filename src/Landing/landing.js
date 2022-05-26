@@ -25,7 +25,7 @@ function LandingPage() {
                         <h1>
                             99+
                             <p>
-                                Empresas Contrataram
+                                Empresas <br />Contrataram
                             </p>
                         </h1>
 

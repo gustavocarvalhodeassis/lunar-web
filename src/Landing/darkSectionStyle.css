@@ -112,7 +112,7 @@ html{
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-    background-image: url(./assets/1.jpg);
+    background-image: url(./assets/3.jpg);
 }
 
 .what-they-say{
@@ -283,9 +283,15 @@ footer h1 font{
     }
  }
  @media screen and (max-width: 480px) {
+     .what-they-say .container-landing{
+         padding: 0;
+     }
+     .what-they-say .title{
+         text-align: center;
+     }
     .container-landing{
         max-width: none;
         width: 100%;
-        margin: 0px 20px;
+        padding: 0px 20px;
     }
  }
