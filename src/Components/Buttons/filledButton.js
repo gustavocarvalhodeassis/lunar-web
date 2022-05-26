@@ -1,6 +1,7 @@
+import React from 'react'
 import './buttonStyle.css'
 
-function FilledButton (props) {
+function FilledButton(props) {
     return <>
         <button className='btn btn-filled'>
             {props.text}
