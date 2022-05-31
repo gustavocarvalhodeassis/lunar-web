@@ -2,22 +2,33 @@ import React from "react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import Logo from "../NavBar/Components/Logo";
 import { Button } from "../Buttons/ButtonComponents";
-import { Header, MenuLabel, NavContainer, Nav, NavLink, DropDown, DropDownContent, DropDownText, DropDownLinkText, NavBackArea } from "./NavBarMobileComponent";
+import {
+    Header,
+    MenuLabel,
+    NavContainer,
+    Nav,
+    NavLink,
+    DropDown,
+    DropDownContent,
+    DropDownText,
+    DropDownLinkText,
+    NavBackArea
+} from "./NavBarMobileComponent";
 import { navLinks } from "../NavBar/Data/NavBarData";
 import './NavBarMobileStyle.css'
 import { Container } from "../Global/Components";
 
 function NavBarMobile() {
-    var btnState = false
+    var btnState = false;
     function openNav() {
         if (btnState !== true) {
-            console.log(btnState)
-            document.getElementById("openLinks").style.display = "flex"
-            btnState = true
+            console.log(btnState);
+            document.getElementById("openLinks").style.display = "flex";
+            btnState = true;
         } else {
-            console.log(btnState)
-            document.getElementById("openLinks").style.display = "none"
-            btnState = false
+            console.log(btnState);
+            document.getElementById("openLinks").style.display = "none";
+            btnState = false;
         }
     }
 
@@ -30,12 +41,10 @@ function NavBarMobile() {
                             className="menu_checker"
                             onClick={() => openNav()}
                             type={"checkbox"} />
-                        {btnState ?
-                            <FiX color="#393E45" size={35} />
-                            : <FiMenu color="#393E45" size={35} />}
+                            <FiMenu color="#393E45" size={35} />
                         <Logo />
                     </MenuLabel>
-                    <Nav id="openLinks">
+                    <Nav id="openLinks" className="nav-animation">
                         {navLinks.map((item) => {
                             return (
                                 <>

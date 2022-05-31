@@ -7,7 +7,7 @@ const navFontWeight = "600";
 export const Header = styled.nav` 
   width: 100%;
   display: none;
-  padding-top: 30px;
+  padding: 30px 0px;
   align-items: flex-start;
   justify-content: start;
 
@@ -18,16 +18,18 @@ export const Header = styled.nav`
 
 export const NavContainer = styled.nav` 
     display: flex;
-    height: 100vh;
+    height: 100%;
     align-items: start;
     justify-content: start;
     flex-direction: column;
+
 `;
 
 export const MenuLabel = styled.label`
     display: flex;
     align-items: center;
     gap: 30px;
+    cursor: pointer;
 `
 
 export const MenuButton = styled.div`
@@ -35,10 +37,16 @@ export const MenuButton = styled.div`
 `
 
 export const Nav = styled.nav` 
-    display: flex;
+    display: none;
+    margin-top: 10px;
+    padding: 30px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: start;
     gap: 30px;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    background-color: white;
 `
 
 export const NavLink = styled.a`
@@ -121,5 +129,6 @@ export const DropDownLinkText = styled.a`
 `;
 
 export const NavBackArea = styled.div`
-
+  width: 20%;
+  background-color: black;
 `
