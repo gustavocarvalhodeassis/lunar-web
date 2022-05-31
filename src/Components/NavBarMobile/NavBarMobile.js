@@ -19,16 +19,29 @@ import './NavBarMobileStyle.css'
 import { Container } from "../Global/Components";
 
 function NavBarMobile() {
-    var btnState = false;
+    var menuBtnState = false;
+    var dropdownBtnState = false;
     function openNav() {
-        if (btnState !== true) {
-            console.log(btnState);
+        if (menuBtnState !== true) {
+            console.log(menuBtnState);
             document.getElementById("openLinks").style.display = "flex";
-            btnState = true;
+            menuBtnState = true;
         } else {
-            console.log(btnState);
+            console.log(menuBtnState);
             document.getElementById("openLinks").style.display = "none";
-            btnState = false;
+            menuBtnState = false;
+            
+        }
+    }
+    function openDropDown() {
+        if (dropdownBtnState !== true) {
+            console.log(dropdownBtnState);
+            document.getElementById("dropdown_id").style.display = "flex";
+            dropdownBtnState = true;
+        } else {
+            console.log(dropdownBtnState);
+            document.getElementById("dropdown_id").style.display = "none";
+            dropdownBtnState = false;
         }
     }
 
@@ -39,9 +52,13 @@ function NavBarMobile() {
                     <MenuLabel>
                         <input
                             className="menu_checker"
-                            onClick={() => openNav()}
+                            onClick={
+                               () => openNav()
+                                
+                            
+                            }
                             type={"checkbox"} />
-                            <FiMenu color="#393E45" size={35} />
+                        <FiMenu color="#393E45" size={35} />
                         <Logo />
                     </MenuLabel>
                     <Nav id="openLinks" className="nav-animation">
@@ -52,8 +69,11 @@ function NavBarMobile() {
                                         <Button> {item.name} </Button>
                                     ) : item.dropdown ? (
                                         <DropDown>
-                                            <DropDownText>{item.name}<FiChevronDown size={"32px"} /></DropDownText>
-                                            <DropDownContent>
+                                            <DropDownText onClick={() => openDropDown()}>
+                                                {item.name}
+                                                <FiChevronDown size={"32px"} />
+                                            </DropDownText>
+                                            <DropDownContent id="dropdown_id" className="dropdown-animation">
                                                 {item.linkList.map((painelList) => {
                                                     return (
                                                         <>

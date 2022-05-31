@@ -4,11 +4,29 @@
 .resp_links_id{
     display: none;
 }
+.dropdown_id{
+    display: none;
+}
+
 .nav-animation{
     animation: menuOpenAnimation 0.5s ease-in-out;
 }
+.dropdown-animation{
+    animation: dropdownOpenAnimation 0.5s ease-in-out;
+}
 
 @keyframes menuOpenAnimation{
+    0%{
+        border-radius: 0px;
+        opacity: 0;
+    }
+    100% {
+        border-radius: 20px;
+        opacity: 1;
+    }
+  
+}
+@keyframes dropdownOpenAnimation{
     0%{
         border-radius: 0px;
         opacity: 0;

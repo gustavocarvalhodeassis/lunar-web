@@ -67,6 +67,7 @@ export const NavLink = styled.a`
 
 export const DropDown = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
@@ -74,8 +75,6 @@ export const DropDown = styled.div`
 /* DropDown Conteudo á aparecer */
 export const DropDownContent = styled.div`
   display: none;
-  top: 0px;
-  position: absolute;
   padding: 20px 10px;
   background-color: white;
   top: 80px;
@@ -84,10 +83,6 @@ export const DropDownContent = styled.div`
   border-radius: 15px;
   flex-direction: column;
   align-items: center;
-
-  &:hover{
-      display: flex;
-  }
 `;
 
 /* DropDown Nome */
@@ -107,9 +102,6 @@ export const DropDownText = styled.a`
     background-color: rgba(0, 0, 0, 0.05);
   }
 
-  &:hover + ${DropDownContent} {
-    display: flex;
-  }
 `;
 
 /* DropDown Nome dos links */
