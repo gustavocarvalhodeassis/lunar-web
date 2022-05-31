@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import NavBar from './Components/NavBar/NavBar';
+import NavBarMobile from './Components/NavBarMobile/NavBarMobile';
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -9,6 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <NavBar />
+    <NavBarMobile />
     {/*<LandingPage />*/} 
     {/*<FloatingActionButton />*/}
 

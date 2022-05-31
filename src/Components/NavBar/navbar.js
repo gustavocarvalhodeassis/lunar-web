@@ -4,7 +4,7 @@ import { navLinks } from "./Data/NavBarData";
 
 import {
   Header,
-  LinkText,
+  NavLink,
   DropDownText,
   DropDownLinkText,
   DropDown,
@@ -12,49 +12,52 @@ import {
   Nav,
 } from "./NavBarComponents";
 
-import "./navbarStyle.css";
+import "./NavBarStyle.css";
 
-import FilledButton from "../Buttons/filledButton";
+import {Button} from "../Buttons/ButtonComponents";
 import Logo from "./Components/Logo";
 import { Link } from "react-router-dom";
 import { Container } from "../Global/Components";
 
-import {FiChevronDown} from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 
 function NavBar() {
   return (
     <>
       <Header class>
         <Container>
-          <Logo />
-          <Nav>
-            {navLinks.map((item) => {
-              return (
-                <>
-                  {item.button ? (
-                    <FilledButton text={item.name} />
-                  ) : item.dropdown ? (
-                    <DropDown>
-                      <DropDownText>{item.name}<FiChevronDown size={"32px"} /></DropDownText>
-                      <DropDownContent>
-                        {item.linkList.map((painelList) => {
-                          return (
-                            <>
-                              <DropDownLinkText>
-                                {painelList.name}
-                              </DropDownLinkText>
-                            </>
-                          );
-                        })}
-                      </DropDownContent>
-                    </DropDown>
-                  ) : (
-                    <LinkText>{item.name}</LinkText>
-                  )}
-                </>
-              );
-            })}
-          </Nav>
+          <div className="nav-flex">
+            <Logo />
+            <Nav>
+              {navLinks.map((item) => {
+                return (
+                  <>
+                    {item.button ? (
+                      <Button> {item.name} </Button>
+                    ) : item.dropdown ? (
+                      <DropDown>
+                        <DropDownText>{item.name}<FiChevronDown size={"32px"} /></DropDownText>
+                        <DropDownContent>
+                          {item.linkList.map((painelList) => {
+                            return (
+                              <>
+                                <DropDownLinkText>
+                                  {painelList.name}
+                                </DropDownLinkText>
+                              </>
+                            );
+                          })}
+                        </DropDownContent>
+                      </DropDown>
+                    ) : (
+                      <NavLink>{item.name}</NavLink>
+                    )}
+                  </>
+                );
+              })}
+            </Nav>
+            
+          </div>
         </Container>
       </Header>
     </>

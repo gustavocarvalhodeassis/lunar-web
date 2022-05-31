@@ -1,33 +1,46 @@
-import styled from "styled-components";
+import styled from 'styled-components'
+
 
 const navTextSize = "1rem";
 const navFontWeight = "600";
 
-/* Fundo da NavBar */
-export const Header = styled.header`
-  padding: 30px 0px;
-  align-items: center;
+export const Header = styled.nav` 
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
+  display: none;
+  padding-top: 30px;
+  align-items: flex-start;
+  justify-content: start;
 
   @media screen and (max-width: 860px){
-    display: none;
+      display: flex;
   }
+`
+
+export const NavContainer = styled.nav` 
+    display: flex;
+    height: 100vh;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
 `;
 
-/* Separa a logo dos links para o SpaceBetween */
-export const Nav = styled.nav`
-  display: flex;
-  align-items: center;
+export const MenuLabel = styled.label`
+    display: flex;
+    align-items: center;
+    gap: 30px;
+`
 
-  @media screen and (max-width: 860px){
-    display: none;
-  }
-`;
+export const MenuButton = styled.div`
 
-/* Links da navBar */
+`
+
+export const Nav = styled.nav` 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+`
+
 export const NavLink = styled.a`
   text-decoration: none;
   font-size: ${navTextSize};
@@ -44,7 +57,6 @@ export const NavLink = styled.a`
 
 `;
 
-/* DropDown Base */
 export const DropDown = styled.div`
   display: flex;
   align-items: center;
@@ -107,3 +119,7 @@ export const DropDownLinkText = styled.a`
     background-color: rgba(0, 0, 0, 0.05);
   }
 `;
+
+export const NavBackArea = styled.div`
+
+`
