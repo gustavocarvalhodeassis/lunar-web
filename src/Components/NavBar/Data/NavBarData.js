@@ -1,42 +1,73 @@
-import React from "react"
+
+export const simpleLink = [
+  {
+    name: "inicio",
+    ancora: "#home",
+  },
+  {
+    name: "sobre",
+    ancora: "#about",
+  },
+  {
+    name: "avaliação",
+    ancora: "#report",
+  },
+];
+
+export const dropdown = [
+  {
+    name: "paineis",
+    linkList: [
+      {
+        name: "representante",
+        link: "#",
+      },
+      {
+        name: "contador",
+        link: "#",
+      },
+    ],
+  },
+];
+
+export const button = [
+  {
+    name: "fazer parte!",
+    ancora: "#takepart",
+  },
+];
 
 export const navLinks = [
-    {
-        name: 'inicio',
-        dropdown: false,
-        button: false,
-        ancora: '#home'
-    },
-    {
-        name: 'sobre',
-        dropdown: false,
-        button: false,
-        ancora: '#about'
-    },
-    {
-        name: 'avaliação',
-        dropdown: false,
-        button: false,
-        ancora: '#report'
-    },
-    {
-        name: 'paineis',
-        dropdown: true,
-        button: false, 
-        linkList: [
-            {
-                name: 'representante',
-                link: '#'
-            },
-            {
-                name: 'contador',
-                link: '#'
-            },
-        ]
-    },
-    {
-        name: 'fazer parte!',
-        ancora: '#takepart',
-        button: true,   
-    },
+  {
+    simple: [
+      {
+        name: "inicio",
+        ancora: "#home",
+      },
+      {
+        name: "sobre",
+        ancora: "#about",
+      },
+      {
+        name: "avaliação",
+        ancora: "#report",
+      },
+    ]
+  },
+  {
+    dropdown: [
+      {
+        name: "dinicio",
+        ancora: "#home",
+      },
+      {
+        name: "dsobre",
+        ancora: "#about",
+      },
+      {
+        name: "davaliação",
+        ancora: "#report",
+      },
+    ]
+  },
 ]

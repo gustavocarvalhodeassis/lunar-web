@@ -14,7 +14,12 @@
 .dropdown-animation{
     animation: dropdownOpenAnimation 0.5s ease-in-out;
 }
-
+#closeMenuButton{
+    display: block;
+}
+#showCloseButton{
+    display: none;
+}
 @keyframes menuOpenAnimation{
     0%{
         border-radius: 0px;

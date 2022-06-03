@@ -10,6 +10,7 @@ export const Header = styled.nav`
   padding: 30px 0px;
   align-items: flex-start;
   justify-content: start;
+  background-color: white;
 
   @media screen and (max-width: 860px){
       display: flex;
@@ -39,7 +40,9 @@ export const MenuButton = styled.div`
 export const Nav = styled.nav` 
     display: none;
     margin-top: 10px;
-    padding: 30px;
+    padding: 30px 0;
+    width: 300px;
+    position: absolute;
     flex-direction: column;
     align-items: center;
     justify-content: start;
@@ -77,7 +80,7 @@ export const DropDownContent = styled.div`
   display: none;
   padding: 20px 10px;
   background-color: white;
-  top: 80px;
+  justify-content: center;
   gap: 15px;
   box-shadow: 0px 25px 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -93,7 +96,7 @@ export const DropDownText = styled.a`
   align-items: center;
   display: flex;
   padding: 5px 20px;
-  
+  gap: 10px;
   text-transform: capitalize;
   cursor: pointer;
 
@@ -119,8 +122,3 @@ export const DropDownLinkText = styled.a`
     background-color: rgba(0, 0, 0, 0.05);
   }
 `;
-
-export const NavBackArea = styled.div`
-  width: 20%;
-  background-color: black;
-`

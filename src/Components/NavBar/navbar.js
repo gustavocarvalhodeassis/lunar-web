@@ -1,6 +1,6 @@
 import React from "react";
 
-import { navLinks } from "./Data/NavBarData";
+import { simpleLink, dropdown, button } from "./Data/NavBarData";
 
 import {
   Header,
@@ -14,7 +14,7 @@ import {
 
 import "./NavBarStyle.css";
 
-import {Button} from "../Buttons/ButtonComponents";
+import { Button } from "../Buttons/ButtonComponents";
 import Logo from "./Components/Logo";
 import { Link } from "react-router-dom";
 import { Container } from "../Global/Components";
@@ -24,39 +24,30 @@ import { FiChevronDown } from "react-icons/fi";
 function NavBar() {
   return (
     <>
-      <Header class>
+      <Header>
         <Container>
           <div className="nav-flex">
             <Logo />
             <Nav>
-              {navLinks.map((item) => {
+              {simpleLink.map((item) => {
+                return <NavLink>{item.name}</NavLink>;
+              })}
+              {dropdown.map((item) => {
                 return (
-                  <>
-                    {item.button ? (
-                      <Button> {item.name} </Button>
-                    ) : item.dropdown ? (
-                      <DropDown>
-                        <DropDownText>{item.name}<FiChevronDown size={"32px"} /></DropDownText>
-                        <DropDownContent>
-                          {item.linkList.map((painelList) => {
-                            return (
-                              <>
-                                <DropDownLinkText>
-                                  {painelList.name}
-                                </DropDownLinkText>
-                              </>
-                            );
-                          })}
-                        </DropDownContent>
-                      </DropDown>
-                    ) : (
-                      <NavLink>{item.name}</NavLink>
-                    )}
-                  </>
+                  <DropDown>
+                    <DropDownText>{item.name}</DropDownText>
+                    <DropDownContent>
+                      {item.linkList.map((item) => {
+                        return <DropDownLinkText>{item.name}</DropDownLinkText>;
+                      })}
+                    </DropDownContent>
+                  </DropDown>
                 );
               })}
+              {button.map((item) => {
+                return <Button>Fazer Parte!</Button>;
+              })}
             </Nav>
-            
           </div>
         </Container>
       </Header>
@@ -65,3 +56,25 @@ function NavBar() {
 }
 
 export default NavBar;
+
+{
+  /*<>
+                    {navLinks.map((item) => {
+                      return (
+                        <>
+                          {item.simple((i) => {
+                            return 
+                          })}
+                          ,
+                          {item.dropdown((i) => {
+                            return <NavLink>{i.name}</NavLink>;
+                          })}
+                          ,
+                          {item.button((i) => {
+                            return <Button>{i.name}</Button>;
+                          })}
+                        </>
+                      );
+                    })}
+                  </>*/
+}

@@ -1,7 +1,8 @@
+import React from 'react'
+
 import './landingStyle.css'
 import './darkSectionStyle.css'
-import Menu from '../Components/NavBar/Menu/menu'
-import FilledButton from '../Components/Buttons/filledButton'
+import {Button} from '../Components/Buttons/ButtonComponents'
 
 function LandingPage() {
     return <>
@@ -159,7 +160,7 @@ function LandingPage() {
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi magna nulla, rutrum in ornare sed, blandit id ex. Cras consequat, libero a accumsan vestibulum.
                     </p>
-                    <FilledButton text="Fazer parte!"/>
+                    <Button/>
                 </div>
             </div>
         </footer>
