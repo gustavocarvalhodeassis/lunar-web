@@ -16,10 +16,7 @@ import './navbarStyle.css'
 
 import { Button } from "../Buttons/ButtonComponents";
 import Logo from "./Components/Logo";
-import { Link } from "react-router-dom";
 import { Container } from "../Global/Components";
-
-import { FiChevronDown } from "react-icons/fi";
 
 function NavBar() {
   return (

@@ -1,0 +1,66 @@
+font {
+    color: #7A3FF3;
+}
+.section-1{
+    display: flex;
+}
+.information-card {
+    padding:30px;
+    width: fit-content;
+    background-color: #7A3FF3;
+    gap: 30px;
+    border-radius: 15px;
+    transform: translate(0, -50%);
+    color: white;
+}
+.about-card{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 120px;
+}
+.about-card h1{
+    color: white !important;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 15px;
+}
+.about-card p{
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 25px;
+    font-size: .9rem;
+    line-height: 35px;
+}
+.main-title {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 30px;
+}
+
+.divide-content {
+    width: 50%;
+}
+
+.gap-15{
+    gap: 15px;
+}
+
+
+@media screen and (max-width: 860px){
+    .divide-content {
+        width: auto;
+    }
+    .information-card{
+        transform: translate(0,0);
+    }
+    .al-cnt{
+        display: flex;
+        align-items: center;
+    }
+    .js-cnt{
+        display: flex;
+        justify-content: center;
+    }
+}

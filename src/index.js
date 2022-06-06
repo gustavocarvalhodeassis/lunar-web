@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NavBar from './Components/NavBar/navbar';
+import NavBar from './Components/NavBar/NavBar';
 import NavBarMobile from './Components/NavBarMobile/NavBarMobile';
-import LandingPage from './Landing/landing'
-import FloatingActionButton from './Landing/Elements/floatingActionButton'
+import Home from './Landing/Home/Home';
+import FloatingActionButton from './Components/Global/Elements/floatingActionButton';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <NavBar />
     <NavBarMobile />
-    <LandingPage /> 
+    <Home />
     <FloatingActionButton />
 
   </React.StrictMode>

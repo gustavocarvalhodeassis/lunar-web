@@ -5,14 +5,12 @@ import { Button } from "../Buttons/ButtonComponents";
 import {
   Header,
   MenuLabel,
-  NavContainer,
   Nav,
   NavLink,
   DropDown,
   DropDownContent,
   DropDownText,
   DropDownLinkText,
-  NavBackArea,
 } from "./NavBarMobileComponent";
 import { dropdown, simpleLink, button } from "../NavBar/Data/NavBarData";
 import "./NavBarMobileStyle.css";
