@@ -12,7 +12,7 @@ import {
   Nav,
 } from "./NavBarComponents";
 
-import "./NavBarStyle.css";
+import './navbarStyle.css'
 
 import { Button } from "../Buttons/ButtonComponents";
 import Logo from "./Components/Logo";
@@ -56,25 +56,4 @@ function NavBar() {
 }
 
 export default NavBar;
-
-{
-  /*<>
-                    {navLinks.map((item) => {
-                      return (
-                        <>
-                          {item.simple((i) => {
-                            return 
-                          })}
-                          ,
-                          {item.dropdown((i) => {
-                            return <NavLink>{i.name}</NavLink>;
-                          })}
-                          ,
-                          {item.button((i) => {
-                            return <Button>{i.name}</Button>;
-                          })}
-                        </>
-                      );
-                    })}
-                  </>*/
-}
+  
