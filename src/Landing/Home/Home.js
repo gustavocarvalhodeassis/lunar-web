@@ -3,9 +3,9 @@ import React from "react";
 import { Container } from "../../Components/Global/Components";
 import { HomeSection, Title, Paragraph, FullWidthImg, Flex, AboutCard, BackgroudDark } from "./HomeComponents";
 import './homeStyle.css'
+import { Carousel } from "../Carousel/Carousel";
 
 import {aboutCard} from './Data/About'
-import { Carousel } from "../Carousel/Carousel";
 
 function Home() {
     return (

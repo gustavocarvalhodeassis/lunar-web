@@ -53,3 +53,8 @@ body {
     border-radius: 20px;
     transition: all 0.5s;
 }
+.round-carousel{
+    transform: translate(0,0);
+    display: flex;
+    flex-direction: row;
+}
