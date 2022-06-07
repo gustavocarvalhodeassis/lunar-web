@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const BaseCarousel = styled.section`
     align-items: center;
     width: 100%;
-    height: max-content;
     display: flex;
     flex-direction: column;
     margin-top: 120px;
@@ -23,4 +22,9 @@ export const CarouselButton = styled.button`
     font-size: 1.2rem;
     cursor: pointer;
     align-self: flex-end;
+`
+export const CarouselCounter = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 15px;
 `

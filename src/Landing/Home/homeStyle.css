@@ -37,8 +37,11 @@ font {
     align-items: flex-start !important;
     justify-content: flex-start !important;
     gap: 30px;
+    margin-bottom: 60px;
 }
-
+.main-title p{
+    line-height: 50px;
+}
 .divide-content {
     width: 50%;
 }

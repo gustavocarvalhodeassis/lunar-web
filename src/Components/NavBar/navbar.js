@@ -12,7 +12,7 @@ import {
   Nav,
 } from "./NavBarComponents";
 
-import './navbarStyle.css'
+import './NavBarStyle.css'
 
 import { Button } from "../Buttons/ButtonComponents";
 import Logo from "./Components/Logo";

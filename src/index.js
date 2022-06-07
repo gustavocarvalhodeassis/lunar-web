@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NavBar from './Components/NavBar/NavBar';
+import NavBar from './Components/NavBar/navbar';
 import NavBarMobile from './Components/NavBarMobile/NavBarMobile';
 import Home from './Landing/Home/Home';
 import FloatingActionButton from './Components/Global/Elements/floatingActionButton';
