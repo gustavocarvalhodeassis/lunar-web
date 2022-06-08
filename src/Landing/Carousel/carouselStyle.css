@@ -58,3 +58,9 @@ body {
     display: flex;
     flex-direction: row;
 }
+.disabled-carousel{
+    transform: scale(0.8);
+}
+.enabled-carousel{
+    transform: scale(1);
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "../../Components/Global/Components";
 import {
   BaseCarousel,
@@ -11,20 +11,32 @@ import "./carouselStyle.css";
 import { Button } from "../../Components/Buttons/ButtonComponents";
 
 export function Carousel() {
+  let i = 0;
+  let x = 0;
+  let gotIndex = 0;
+  let carouselIndex;
 
-  const changeCarousel = useState(0)
-  let x = 0
-  var scale = ({
-    'transform': 'scale(0.1)'
- });
   function onNext() {
-    x = x - 100
-    document.querySelector(".round-carousel").style.transform = "translate("+x+"%,0)"
-    if(x == -400){
-      x = x + 500
-    } 
-    console.log(x)
-  } 
+    gotIndex = gotIndex + 1;
+    if (gotIndex > 4) {
+      gotIndex = 0;
+    }
+    console.log("gotIndex = " + gotIndex);
+    if (x < -300) {
+      x = 0;
+      document.querySelector(".round-carousel").style.transform =
+        "translate(" + x + "%,0)";
+    } else {
+      x = x - 100;
+      document.querySelector(".round-carousel").style.transform =
+        "translate(" + x + "%,0)";
+      
+    }
+    for (i; i < carouselData.length; i++) {
+      carouselIndex = carouselData[i].classId;
+      console.log("carrocel " + carouselIndex + " Index " + gotIndex);
+    }
+  }
 
   return (
     <>
@@ -32,36 +44,32 @@ export function Carousel() {
         <Container className="round-carousel">
           {
             <>
-              <CarouselImage style={scale}>
-                <img src={carouselData[0].imgCarousel} alt="" />
-              </CarouselImage>
-              <CarouselImage style={scale}>
-                <img src={carouselData[1].imgCarousel} alt="" />
-              </CarouselImage>
-              <CarouselImage style={scale}>
-                <img src={carouselData[2].imgCarousel} alt="" />
-              </CarouselImage>
-              <CarouselImage style={scale}>
-                <img src={carouselData[3].imgCarousel} alt="" />
-              </CarouselImage>
-              <CarouselImage style={scale}>
-                <img src={carouselData[4].imgCarousel} alt="" />
-              </CarouselImage>
+              {carouselData.map((i) => {
+                return (
+                  <CarouselImage
+                    className={
+                      carouselIndex === gotIndex
+                        ? "enabled-carousel "
+                        : "disabled-carousel"
+                    }
+                    setIndex={i.index}
+                  >
+                    <img src={i.imgCarousel} alt="" />
+                  </CarouselImage>
+                );
+              })}
             </>
           }
         </Container>
         <Container className="carousel-button">
           <CarouselCounter>
-            <div className="counter1"></div>
-            <div className="counter2"></div>
-            <div className="counter3"></div>
-            <div className="counter4"></div>
-            <div className="counter5"></div>
-            <div className="counter6"></div>
+            {carouselData.map((i) => {
+              return <div className="counter1"></div>;
+            })}
           </CarouselCounter>
           <Button
             onClick={() => {
-              onNext()
+              onNext();
             }}
           >
             Proximo
