@@ -11,17 +11,26 @@ import "./carouselStyle.css";
 import { Button } from "../../Components/Buttons/ButtonComponents";
 
 export function Carousel() {
-  let i = 0;
   let x = 0;
-  let gotIndex = 0;
-  let carouselIndex;
+  let index = 0;
 
+  var disabledCarousel = ({
+    'transform': 'scale(0.8)'
+  })
+  var enabledCarousel = ({
+    'transform': 'scale(1)'
+  })
+
+  let changeCarousel = disabledCarousel
+  if (carouselData[0].active === true) {
+    changeCarousel = enabledCarousel
+  }
   function onNext() {
-    gotIndex = gotIndex + 1;
-    if (gotIndex > 4) {
-      gotIndex = 0;
+    index = index + 1;
+
+    if (index > 4) {
+      index = 0;
     }
-    console.log("gotIndex = " + gotIndex);
     if (x < -300) {
       x = 0;
       document.querySelector(".round-carousel").style.transform =
@@ -30,11 +39,13 @@ export function Carousel() {
       x = x - 100;
       document.querySelector(".round-carousel").style.transform =
         "translate(" + x + "%,0)";
-      
-    }
-    for (i; i < carouselData.length; i++) {
-      carouselIndex = carouselData[i].classId;
-      console.log("carrocel " + carouselIndex + " Index " + gotIndex);
+      for (var i = 0; i <= 4; i++) {
+        if (carouselData[i].classId === index) {
+          changeCarousel = enabledCarousel
+        } else {
+          changeCarousel = disabledCarousel
+        }
+      }
     }
   }
 
@@ -43,22 +54,12 @@ export function Carousel() {
       <BaseCarousel>
         <Container className="round-carousel">
           {
-            <>
-              {carouselData.map((i) => {
-                return (
-                  <CarouselImage
-                    className={
-                      carouselIndex === gotIndex
-                        ? "enabled-carousel "
-                        : "disabled-carousel"
-                    }
-                    setIndex={i.index}
-                  >
-                    <img src={i.imgCarousel} alt="" />
-                  </CarouselImage>
-                );
-              })}
-            </>
+            carouselData.map((carousels) => {
+              return (
+                <CarouselImage style={changeCarousel}>
+                  <img src={carousels.imgCarousel} alt="" />
+                </CarouselImage>)
+            })
           }
         </Container>
         <Container className="carousel-button">

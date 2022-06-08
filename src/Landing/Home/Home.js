@@ -47,7 +47,7 @@ function Home() {
                 }
                 
             </Container>
-            <Carousel></Carousel>
+            <Carousel />
             </BackgroudDark>
         </HomeSection>
 

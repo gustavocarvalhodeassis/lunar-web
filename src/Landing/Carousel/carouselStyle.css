@@ -53,14 +53,15 @@ body {
     border-radius: 20px;
     transition: all 0.5s;
 }
+.round-carousel img {
+    min-width: 1100px;
+    width: fit-content;
+    border-radius: 20px;
+    height: 600px;
+}
 .round-carousel{
     transform: translate(0,0);
+    transition: all 0.5s ease;
     display: flex;
     flex-direction: row;
-}
-.disabled-carousel{
-    transform: scale(0.8);
-}
-.enabled-carousel{
-    transform: scale(1);
 }

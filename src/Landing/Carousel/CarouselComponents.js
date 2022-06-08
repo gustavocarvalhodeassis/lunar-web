@@ -8,7 +8,8 @@ export const BaseCarousel = styled.section`
     margin-top: 120px;
 `
 export const CarouselImage = styled.div`
-    
+    width: 1100px;
+    height: 600px;
 `
 export const CarouselButton = styled.button`
     align-items: center;
