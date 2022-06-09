@@ -2,30 +2,25 @@ import styled from 'styled-components'
 
 export const BaseCarousel = styled.section`
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    margin-top: 120px;
 `
-export const CarouselImage = styled.div`
-    width: 1100px;
-    height: 600px;
-`
-export const CarouselButton = styled.button`
+
+export const CarouselActions = styled.div`
+    display: flex;
     align-items: center;
-    font-family: 'Poppins';
-    background-color: transparent;
-    gap: 20px;
-    border: none;
-    outline: none;
-    display: flex;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    align-self: flex-end;
+    width: 100%;
+    justify-content: space-between;
 `
+
 export const CarouselCounter = styled.div`
     display: flex;
-    align-items: center;
     gap: 15px;
+    align-items: center;
+`
+export const CarouselCounterIndex = styled.div`
+    width: 5px;
+    height: 5px;
 `

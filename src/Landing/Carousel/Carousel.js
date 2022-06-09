@@ -1,82 +1,56 @@
-import React from "react";
-import { Container } from "../../Components/Global/Components";
-import {
-  BaseCarousel,
-  CarouselImage,
-  CarouselCounter,
-} from "./CarouselComponents";
+import React, { useState } from "react";
 import { carouselData } from "./Data/CarouselData";
-
+import { CgArrowLongRight, CgArrowLongLeft } from 'react-icons/cg'
 import "./carouselStyle.css";
 import { Button } from "../../Components/Buttons/ButtonComponents";
+import { Container } from "../../Components/Global/Components";
+export function Carousel({ slides }) {
 
-export function Carousel() {
-  let x = 0;
-  let index = 0;
+  const [current, setCurrent] = useState(0)
+  const length = slides.length
 
-  var disabledCarousel = ({
-    'transform': 'scale(0.8)'
-  })
-  var enabledCarousel = ({
-    'transform': 'scale(1)'
-  })
-
-  let changeCarousel = disabledCarousel
-  if (carouselData[0].active === true) {
-    changeCarousel = enabledCarousel
+  const slideNext = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1)
   }
-  function onNext() {
-    index = index + 1;
 
-    if (index > 4) {
-      index = 0;
-    }
-    if (x < -300) {
-      x = 0;
-      document.querySelector(".round-carousel").style.transform =
-        "translate(" + x + "%,0)";
-    } else {
-      x = x - 100;
-      document.querySelector(".round-carousel").style.transform =
-        "translate(" + x + "%,0)";
-      for (var i = 0; i <= 4; i++) {
-        if (carouselData[i].classId === index) {
-          changeCarousel = enabledCarousel
-        } else {
-          changeCarousel = disabledCarousel
-        }
-      }
-    }
+  const slidePrev = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1)
+  }
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null
   }
 
   return (
     <>
-      <BaseCarousel>
-        <Container className="round-carousel">
+      <Container>
+        <section className="slider">
           {
-            carouselData.map((carousels) => {
+            carouselData.map((item, index) => {
               return (
-                <CarouselImage style={changeCarousel}>
-                  <img src={carousels.imgCarousel} alt="" />
-                </CarouselImage>)
+                <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                  {
+                    index === current && (<img src={item.carouselImg} alt='imagens do sistema' className="image" />)
+                  }
+
+                </div>
+
+              )
             })
           }
-        </Container>
-        <Container className="carousel-button">
-          <CarouselCounter>
-            {carouselData.map((i) => {
-              return <div className="counter1"></div>;
-            })}
-          </CarouselCounter>
-          <Button
-            onClick={() => {
-              onNext();
-            }}
-          >
-            Proximo
-          </Button>
-        </Container>
-      </BaseCarousel>
+        </section>
+        <div className="carousel-actions">
+          <Button onClick={slidePrev}><CgArrowLongLeft /></Button>
+          <div className="carousel-counters">{
+            carouselData.map((i, index) => {
+              return (
+                <div className={index === current ? 'counter active' : 'counter'} key={index}></div>
+              )
+            })
+          }</div>
+          <Button onClick={slideNext}><CgArrowLongRight /></Button>
+        </div>
+      </Container>
     </>
   );
 }

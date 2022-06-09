@@ -19,6 +19,12 @@ font {
     align-items: flex-start;
     margin-top: 120px;
 }
+@media screen and (max-width: 860px) {
+    .about-card{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .about-card h1{
     color: white !important;
     font-size: 1.5rem;
@@ -49,8 +55,51 @@ font {
 .gap-15{
     gap: 15px;
 }
+.second-area p{
+    color: rgba(255, 255, 255, 0.7);
+}
+.section-3{
+    width: 100%;
+    margin-top: 120px;
+    justify-content: space-between;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+.section-3-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.mini-cards{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.mini-card{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+.image-1{
+    object-fit: cover;
+    width: max-content;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    align-self: flex-end;
+}
 
-
+@media screen and (max-width: 1100px){
+    .image-1{
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+        display: flex;
+        align-self: flex-end;
+    }
+}
 @media screen and (max-width: 860px){
     .divide-content {
         width: auto;
@@ -65,5 +114,50 @@ font {
     .js-cnt{
         display: flex;
         justify-content: center;
+    }
+    .section-3{
+        margin-top: 120px;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-3-text{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+    .mini-cards{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .mini-card{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .image-1{
+        display: none;
+    }
+}
+@media screen and (max-width: 550px) {
+    .image-1{
+        display: none;
+    }
+    .mini-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
+    .mini-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

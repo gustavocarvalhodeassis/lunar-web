@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Button = styled.button`
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Poppins';
     border-radius: 7px;
     padding: 12px 25px;

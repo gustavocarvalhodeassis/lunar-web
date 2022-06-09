@@ -66,4 +66,5 @@ export const AboutCard = styled.div`
         transform: scale(1.1);
         background-color: #4C5057;
     }
+    
 `
